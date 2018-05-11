@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Unsolved Murders</title>
+    <!-- link to the external CSS file for font awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #878787;
+            margin: 0;
+            font-family: 'Amatic SC', cursive;
+            font-size: 20px;
+            text-align: center;
+            background-color: #151515;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+        }
+
+        h3 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+            font-size: 100%;
+            color: gold;
+        }
+
+        h5 {
+            font-family: 'Amatic SC', cursive;
+            letter-spacing: 1.5px;
+            color: white;
+        }
+
+        .explain{
+            letter-spacing: 1px;
+            font-size: 22px;
+        }
+
+        .nav-header {
+            background: #151515;
+            height: 100px;
+            display: flex;
+        }
+
+        .nav-div {
+            margin: auto;
+        }
+
+        .logo-img {
+            width: 50px;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            margin: 30px;
+        }
+
+        .nav-bar {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-bar-link {
+            color: #878787;
+            font-size: 24px;
+            padding: 20px;
+            letter-spacing: 15px;
+            text-transform: lowercase;
+            text-shadow: 1px 2px #7C7C7C;
+            font-family: "courier new";
+            color: white;
+        }
+
+        .main-header {
+            height: 200px;
+            background-color: #2f2f2f;
+            background: url("imgs/lights.jpg") no-repeat top right;
+            max-width: 100%;
+            opacity: 0.5;
+        }
+
+        .main-header-title {
+            text-align: left;
+            font-size: 1.25em;
+            color: #f7f8f9;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-left: 75px;
+            text-shadow: 2px 2px 5px darkgrey;
+            margin: 0px;
+            font-family: "courier new";
+            padding: 75px 10px;
+            letter-spacing: 20px;
+        }
+
+        .intro {
+            width: 1000px;
+            margin: auto;
+            font-size: 25px;
+            text-align: justify;
+        }
+
+        .entry {
+            font-family: "courier new";
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px darkgrey;
+            letter-spacing: 20px;
+        }  
+
+        .box {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            border: 1px solid;
+            background-color: #f0f5f5; 
+            box-shadow: 5px 5px 5px;  
+            border-radius: 20px;   
+            margin: 15px; 
+         }
+
+        .footer {
+            height: 40px;
+            background: #f0f5f5;
+            padding: 5px;
+        }
+
+        .title {
+          font-family: "courier new";
+          color: #151515;
+          text-shadow: 3px 2px lightgrey;
+        }
+
+        .cover {
+            width: 100%;
+        }
+    </style>
+
+<body>
+    <div class="main-header">
+         
+        <h1 class="main-header-title"><i class="fa fa-quote-left" aria-hidden="true"></i>My Favorite Podcast</h1>
+    </div>
+    <!-- Navbar -->
+    <div>
+        <div class="w3-bar w3-#878787 w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myHideShow()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="mailto:cep1035@wildcats.unh.edu" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Podcasts <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="lore.html" class="w3-bar-item w3-button">Lore</a>
+                    <a href="murder.html" class="w3-bar-item w3-button">My Favorite Murder</a>
+                    <a href="rabbits.html" class="w3-bar-item w3-button">Rabbits</a>
+                    <a href="tapes.html" class="w3-bar-item w3-button">The Black Tapes</a>
+                    <a href="unsolved.html" class="w3-bar-item w3-button">Unsolved Murders</a>
+                    <a href="vanished.html" class="w3-bar-item w3-button">Up and Vanished</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="lore.html" class="w3-bar-item w3-button w3-padding-large">Lore</a>
+        <a href="murder.html" class="w3-bar-item w3-button w3-padding-large">My Favorite Murder</a>
+        <a href="rabbits.html" class="w3-bar-item w3-button w3-padding-large">Rabbits</a>
+        <a href="tapes.html" class="w3-bar-item w3-button w3-padding-large">The Black Tapes</a>
+        <a href="unsolved.html" class="w3-bar-item w3-button w3-padding-large">Unsolved Murders</a>
+        <a href="vanished.html" class="w3-bar-item w3-button w3-padding-large">Up and Vanished</a>
+    </div>
+
+    <img class="cover" src="imgs/unsolvedcover.jpg" alt="unsolved murder cover page">
+    <h2 class="entry"><a href="https://www.parcast.com/unsolved/">Unsolved Murders<br>True Crime Stories</a></h2>
+    <div class="intro">
+        <p> Unsolved Murders is a Parcast podcast hosted by Carter Roy & Wendy Mackenzie. It's a drama with a modern twist on old time radio that delves into the mystery of true cold cases and unsolved murders. The show also features an ensemble cast, and follows the hosts as they take the listeners on an entertaining journey through the crime scene, investigation, and attempts to solve the case.</p>
+    </div>
+
+        <!-- Menu Container -->
+        <div class="w3-container" id="what">
+            <div class="w3-content" style="max-width:1000px">
+
+                <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE YEARS</span></h3>
+                <p class="explain">New episodes are released every Tuesday.</p><br>
+
+                <div class="w3-row w3-center w3-card-2 w3-padding">
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2016');" id="myLink">
+                        <div class="w3-col w3-third tablink">2016</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2017');">
+                        <div class="w3-col w3-third tablink">2017</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2018');">
+                        <div class="w3-col w3-third tablink">2018</div>
+                    </a>                    
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2018');">
+                        <div class="w3-col w3-third tablink"><!-- 2018 --></div>
+                    </a>
+                </div>
+
+<!--                 <div id="2015" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding">
+                        <h3>They Made A Tonic</h3>
+                        <h5>18 Mar 2015</h5>
+                        <p>On the morning of March 17, 1892, a group of townsfolk in rural Rhode Island dug up the graves of three local women.</p>
+                    </div>
+                </div> -->
+
+                <div id="2016" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                    <img src="imgs/axxx.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>The Axeman</h3>
+                        <p>The Axeman of New Orleans is considered to be one of the top 10 serial killers of all time. He begins his killing spree, putting New Orleans citizens on edge.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                        <img src="imgs/ax.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Axeman Part II</h3>
+                        <p>The Axeman writes a chilling letter to the New Orleans citizens with a peculiar offer the can’t refuse, causing more fear and panic to the city’s citizens.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                        <img src="imgs/axx.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Axeman Part III</h3>
+                        <p> The people of NOLA believe they’ve seen the last of the Axeman killer, but he lays in wait for his next victim. The police never caught the Axeman.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:400px">
+                        <img src="imgs/wdtpaper.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Hollywood’s first Murder</h3>
+                        <p>The first ever Hollywood murder leaves the film community and nation in shock. Director William Taylor is found murdered at his home.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:400px">
+                        <img src="imgs/wdt.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Hollywood Part II</h3>
+                        <p>Chaos ensues at the crime scene when evidence is tampered with in an attempt to cover up the director’s past.Proving that in Hollywood, there is always a difference between illusion and reality.</p>
+                    </div>                 
+                </div>
+
+                <div id="2017" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                    <img src="imgs/zodiacletter.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>The Zodiac Killer</h3>
+                        <p>In the late 1960s and early 1970s, the self-proclaimed Zodiac Killer was responsible for at least five murders in Northern California.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                        <img src="imgs/zodiac.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Zodiac Killer Part II</h3>
+                        <p>After being brutally attacked by the Zodiac Killer, Cecelia Shepard gives a description of her attacker that becomes the basis for the famous police sketch.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                        <img src="imgs/crimescene.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>The Hall-Mills Murder</h3>
+                        <p>Two corpses are found posed under a tree in New Brunswick, New Jersey. An heiress, a reverend, a cheating wife, a charming bachelor, the local oddball, and the love affair that turned deadly.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:400px">
+                        <img src="imgs/hall_mill.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>The Hall-Mills Murder<br>part II</h3>
+                        <p>After a gruesome double murder, miscommunicationbetween police departments compromises the scene, leaving the police nothing to go on but the lone witness--a local pig woman.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:400px">
+                        <img src="imgs/aardsma.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Betsy Aardsma</h3>
+                        <p>By all accounts, Betsy Aardsma was a normal girl. She came from a loving family in small-town Holland, Michigan. She had a passion for public service and dreamed of joining the Peace Corps.</p>
+                    </div>                 
+                </div>              
+
+                <div id="2018" class="w3-container menu w3-padding-48 w3-card-2">
+                   <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                    <img src="imgs/djs.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Dorothy Jane Scott</h3>
+                        <p>In May 1980, Dorothy Jane Scott brought a coworker to the University of California Irvine Medical Center... and that's the last time anyone saw her.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                        <img src="imgs/djspaper.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Dorothy Jane Scott<br>Part II</h3>
+                        <p>After months of receiving terrifying phone calls from an anonymous caller, Dorothy Jane Scott was kidnapped in May 1980.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding" style="height:400px">
+                    <div id="googleMap" class="w3-grayscale-max" style="width:100%;height:200px;"></div>   
+                        <h3>Wall Street Bombings</h3>
+                        <p>On September 16, 1920, an explosion went off at 23 Wall Street, killing 38 people and injuring hundreds more. But no one knew who set off the bomb, or why.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:400px">
+                        <img src="imgs/sherman.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Mary S. Sherman</h3>
+                        <p>On July 21, 1964, a fire was reported at the Patio Apartments in New Orleans. The first responders found a disturbing scene... blood splattered on the walls, a burning mattress, and a lifeless body.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:400px">
+                        <img src="imgs/mss.jpg" class="w3-round w3-grayscale-max" style="height:200px">   
+                        <h3>Mary S. Sherman<br>part II</h3>
+                        <p>World-renowned surgeon and cancer researcher Dr. Mary S. Sherman was found brutally murdered in her New Orleans apartment in 1964.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+<!-- end of container -->
+
+
+    <!-- Add Google Maps -->
+    <script>
+        function myMap(){
+            myCenter=new google.maps.LatLng(40.706795,-74.0148577,17);
+            var mapOptions= {
+                center:myCenter,
+                zoom:15, scrollwheel: false, draggable: false,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+    </script>
+    <script>
+        function myOverFunction(x){
+            x.style.color = "#FFF52B";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function leaveCard(x){
+            x.style.color = "white";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function showAlert(x){
+        alert('Thank You for Visiting!');
+        }
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+        }
+        document.getElementById("myLink").click();
+
+       // Used to toggle the menu on small screens when clicking on the menu button
+        function myHideShow() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtlDNWRSVCemkzgcce3oQAIa4k27Za940&callback=myMap">
+    </script>
+    <!--To use this code on your website, get a free API key from Google. Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp -->
+</body>
+
+</html>

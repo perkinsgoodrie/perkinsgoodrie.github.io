@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Up and Vanished</title>
+    <!-- link to the external CSS file for font awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #878787;
+            margin: 0;
+            font-family: 'Amatic SC', cursive;
+            font-size: 20px;
+            text-align: center;
+            background-color: #151515;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+        }
+
+        h4 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+            font-size: 75%;
+            color: white;            
+        }        
+
+        h3 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+            font-size: 100%;
+            color: gold;
+        }
+
+        h5 {
+            font-family: 'Amatic SC', cursive;
+            letter-spacing: 1.5px;
+            color: white;
+        }
+
+        .entry {
+            font-family: "courier new";
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px darkgrey;
+            letter-spacing: 20px;
+        }        
+
+        .explain{
+            letter-spacing: 1px;
+            font-size: 22px;
+        }
+
+        .nav-header {
+            background: #151515;
+            height: 100px;
+            display: flex;
+        }
+
+        .nav-div {
+            margin: auto;
+        }
+
+        .logo-img {
+            width: 50px;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            margin: 30px;
+        }
+
+        .nav-bar {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-bar-link {
+            color: #878787;
+            font-size: 24px;
+            padding: 20px;
+            letter-spacing: 15px;
+            text-transform: lowercase;
+            text-shadow: 1px 2px #7C7C7C;
+            font-family: "courier new";
+            color: white;
+        }
+
+        .main-header {
+            height: 200px;
+            background-color: #2f2f2f;
+            background: url("imgs/lights.jpg") no-repeat top right;
+            max-width: 100%;
+            opacity: 0.5;
+        }
+
+        .main-header-title {
+            text-align: left;
+            font-size: 1.25em;
+            color: #f7f8f9;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-left: 75px;
+            text-shadow: 2px 2px 5px darkgrey;
+            margin: 0px;
+            font-family: "courier new";
+            padding: 75px 10px;
+            letter-spacing: 20px;
+        }
+
+        .intro {
+            width: 1000px;
+            margin: auto;
+            font-size: 25px;
+            text-align: justify;
+        }
+
+        .box {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            border: 1px solid;
+            background-color: #f0f5f5; 
+            box-shadow: 5px 5px 5px;  
+            border-radius: 20px;   
+            margin: 15px; 
+         }
+
+        .footer {
+            height: 40px;
+            background: #f0f5f5;
+            padding: 5px;
+        }
+
+        .cover {
+            width: 100%;
+        }
+
+        .title {
+          font-family: "courier new";
+          color: #151515;
+          text-shadow: 3px 2px lightgrey;
+        }
+    </style>
+
+<body>
+    <div class="main-header">
+         
+        <h1 class="main-header-title"><i class="fa fa-quote-left" aria-hidden="true"></i>My Favorite Podcast</h1>
+    </div>
+    <!-- Navbar -->
+    <div>
+        <div class="w3-bar w3-#878787 w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myHideShow()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="mailto:cep1035@wildcats.unh.edu" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Podcasts <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="lore.html" class="w3-bar-item w3-button">Lore</a>
+                    <a href="murder.html" class="w3-bar-item w3-button">My Favorite Murder</a>
+                    <a href="rabbits.html" class="w3-bar-item w3-button">Rabbits</a>
+                    <a href="tapes.html" class="w3-bar-item w3-button">The Black Tapes</a>
+                    <a href="unsolved.html" class="w3-bar-item w3-button">Unsolved Murders</a>
+                    <a href="vanished.html" class="w3-bar-item w3-button">Up and Vanished</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="lore.html" class="w3-bar-item w3-button w3-padding-large">Lore</a>
+        <a href="murder.html" class="w3-bar-item w3-button w3-padding-large">My Favorite Murder</a>
+        <a href="rabbits.html" class="w3-bar-item w3-button w3-padding-large">Rabbits</a>
+        <a href="tapes.html" class="w3-bar-item w3-button w3-padding-large">The Black Tapes</a>
+        <a href="unsolved.html" class="w3-bar-item w3-button w3-padding-large">Unsolved Murders</a>
+        <a href="vanished.html" class="w3-bar-item w3-button w3-padding-large">Up and Vanished</a>
+    </div>
+
+
+<img class="cover" src="imgs/vanishedcover.jpg" alt="up and vanished cover">
+    <h2 class="entry"><a href="https://upandvanished.com/">Up and Vanished</a></h2>
+    <div class="intro">
+        <p>Atlanta filmmaker Payne Lindsey originally envisioned Up and Vanished as a true-crime documentary. Lindsey selected a missing-person case from his home state, Georgia, and embarked on a journey as an amateur investigator. After starting his research and initial interviews, he decided to present the project in audio form as a podcast.
+        <br>Season 1 of Up and Vanished explored the 2005 disappearance of beauty queen and high school teacher Tara Grinstead from her home in Ocilla, Georgia. The cold case was the largest case file in the Georgia Bureau of Investigation’s history, with no arrests in 11 years. The podcast quickly drew attention, both in South Georgia and nationwide.
+        <br>Reviewing old leads and uncovering new ones, Up and Vanished quickly expanded from a planned six-episode season to a final count of 24 episodes with numerous bonus episodes. As the people of Ocilla began talking about the case again, new leads and stories emerged.
+        <br>In February 2017, the GBI arrested two suspects for Grinstead’s murder. Up and Vanished will continue to provide updates on this no-longer-cold case as the criminal trial proceeds in 2018. A second season of Up and Vanished, covering a completely different true crime story, will debut in early 2018.
+        </p>
+    </div>
+
+        <!-- Menu Container -->
+        <div class="w3-container" id="what">
+            <div class="w3-content" style="max-width:1000px">
+
+                <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE EPISODES</span></h3>
+                <p class="explain">Up and Vanished features main episodes as well as BONUS episodes. The only episodes that will be featured are the main episodes.</p><br>
+
+                <div class="w3-row w3-center w3-card-2 w3-padding">
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/one.jpg" class="w3-round w3-grayscale" style="height:200px">
+                        <h4>Episode One</h4>
+                        <h3>Cold As Alaska</h3>
+                        <p>Filmmaker Payne Lindsey sets out to produce a true-crime documentary and discovers an intriguing unsolved missing persons case from Ocilla, Georgia.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/two.jpg" class="w3-round w3-grayscale" style="height:200px">
+                        <h4>Episode Two</h4>
+                        <h3>White Rabbits</h3>
+                        <p>Payne Lindsey travels to Ocilla and meets with Dusty Vassey, reporter for the local newspaper. He also talks with his grandma’s friend Melba, who has a tip that may or may not mean something.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/three.jpg" class="w3-round w3-grayscale" style="height:200px">                        
+                        <h4>Episode Three</h4>
+                        <h3>The Alibi</h3>
+                        <p>Payne and Maurice discuss the prime piece of evidence, the blue latex glove found outside Tara’s house with some kind of DNA evidence on it. Was it dropped before or after family friend Heath Dykes came to the house to check on Tara?</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/four.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Four</h4>
+                        <h3>Snapdragon Road</h3>
+                        <p>Payne Lindsey travels to Ocilla and meets with Dusty Vassey, reporter for the local newspaper. He also talks with his grandma’s friend Melba, who has a tip that may or may not mean something.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/five.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Five</h4>
+                        <h3>The Black Truck</h3>
+                        <p>Filmmaker Payne Lindsey sets out to produce a true-crime documentary and discovers an intriguing unsolved missing persons case from Ocilla, Georgia.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/six.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Six</h4>
+                        <h3>Suicide</h3>
+                        <p>Payne talks again with dog owner Jim Hanley about evidence he found at the Snapdragon Road house. He interviews GBI Agent Gary Rothwell about Heath Dykes’ trip to Tara’s house (at her mother’s request) and his numerous phone calls to her.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/seven.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Seven</h4>
+                        <h3>Phineas Gage</h3>
+                        <p>Payne dives into the circumstances surrounding the 2010 suicide of a former student of Tara’s, including a chat with Dusty Vassey, who knew the young man’s brother.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/eight.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Eight</h4>
+                        <h3>In the Box</h3>
+                        <p>We continue to investigate the behavior of the young man who died by suicide in 2010. Payne interviews the man’s brother as well as a clinical psychologist regarding his head injury and subsequent personality change.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/nine.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Nine</h4>
+                        <h3>The Glove</h3>
+                        <p>Payne and Maurice examine some emails sent by Tara in the weeks before she disappeared, focusing on her breakup with Marcus Harper and her emotional state of mind.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/ten.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Ten</h4>
+                        <h3>George Harrison</h3>
+                        <p>Payne addresses the issue of several people who were in or around Tara’s house before and during the initial police search, including a conversation with Tara’s friend Mandy, who saw some oddities in how the house was arranged.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/11.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Eleven</h4>
+                        <h3>"There's Our Guy"</h3>
+                        <p>Payne and Maurice try to figure out who’s behind the “George Harrison” Facebook account, including a conversation for Troy Davis who was Facebook friends with him.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/12.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Twelve</h4>
+                        <h3>"I Love You Too"</h3>
+                        <p>Payne and Maurice think they’ve figured out how “George Harrison” (now identified as Jose) knew about the UAV podcast before it started.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/13.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Thirteen</h4>
+                        <h3>Who Is Ryan Duke</h3>
+                        <p>Ryan Duke’s arrest is announced at a GBI press conference in Ocilla, and the UAV team scrambles to find out who in the world he is. Payne first hears about a pecan orchard on the way to Fitzgerald...</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/14.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Fourteen</h4>
+                        <h3>The Pecan Grove</h3>
+                        <p>Legal expert Phillip Holloway explains how gag orders work, and a former associate of Bo Dukes recalls partying in the pecan orchard years ago and that Ryan Duke might have driven a black pick-up truck...</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/15.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Fifteen</h4>
+                        <h3>Older, Wiser Fool</h3>
+                        <p>Payne and Donald visit Tara’s house, meeting the current tenant and examining the yard where the latex glove was found.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/16.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Sixteen</h4>
+                        <h3>Conspiracy</h3>
+                        <p>Payne talks true crime podcasts with Crimetown creator/host Mark Smerling. On a trip to Ocilla, he also visits Marcus Harper's mother.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/17.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Seventeen</h4>
+                        <h3>The Deal</h3>
+                        <p>Payne discusses Ryan Duke's state of mind as an indictment comes down, plus a potential deal is struck.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/18.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Eighteen</h4>
+                        <h3>Not Guilty</h3>
+                        <p>Every story has an ending...</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/19.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Nineteen</h4>
+                        <h3>Brooke's Story</h3>
+                        <p>Bo Dukes's girlfriend finally tells story.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/20.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Twenty</h4>
+                        <h3>Queensland</h3>
+                        <p>The investigation continues as Payne Lindsey uncovers new details and circles back to old evidence.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/21.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Twenty-One</h4>
+                        <h3>Statute of Limitations</h3>
+                        <p>Payne Lindsey explores new evidence of the 2005 orchard search and Philip Holloway weighs in on the statute of limitations.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding"  style="height:450px">
+                        <img src="imgs/22.jpg" class="w3-round w3-grayscale"  style="height:200px">                           
+                        <h4>Episode Twenty-Two</h4>
+                        <h3>The Gag Order</h3>
+                        <p>Finally, some truth.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/23.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Eleven</h4>
+                        <h3>Who Is Bo Dukes</h3>
+                        <p>Exploring the details of Bo Dukes' mysterious conversation with a stranger.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/24.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Twenty-Four</h4>
+                        <h3>Black Out<br>Part I</h3>
+                        <p>Part 1 of 2: After 2 years investigating and bringing weekly updates on the disappearance of Tara Grinstead, Up and Vanished Season 1 is coming to a close.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:450px">
+                        <img src="imgs/25.jpg" class="w3-round w3-grayscale" style="height:200px">                           
+                        <h4>Episode Twenty-Four</h4>
+                        <h3>Black Out<br>Part II</h3>
+                        <p>Part 2 of 2: After 2 years investigating and bringing weekly updates on the disappearance of Tara Grinstead, Up and Vanished Season 1 is coming to a close.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- end of container -->
+
+
+
+    <script>
+        function myOverFunction(x){
+            x.style.color = "#FFF52B";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function leaveCard(x){
+            x.style.color = "white";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function showAlert(x){
+        alert('Thank You for Visiting!');
+        }
+
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+        }
+        document.getElementById("myLink").click();
+
+               // Used to toggle the menu on small screens when clicking on the menu button
+        function myHideShow() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+
+    </script>
+</body>
+
+</html>

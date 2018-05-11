@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Black Tapes</title>
+    <!-- link to the external CSS file for font awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #878787;
+            margin: 0;
+            font-family: 'Amatic SC', cursive;
+            font-size: 20px;
+            text-align: center;
+            background-color: #151515;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+        }
+
+        h4 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+            font-size: 75%;
+            color: white;            
+        }
+
+        h3 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+            font-size: 100%;
+            color: gold;
+        }
+
+        h5 {
+            font-family: 'Amatic SC', cursive;
+            letter-spacing: 1.5px;
+            color: white;
+        }
+
+        .explain{
+            letter-spacing: 1px;
+            font-size: 22px;
+        }
+
+        .nav-header {
+            background: #151515;
+            height: 100px;
+            display: flex;
+        }
+
+        .nav-div {
+            margin: auto;
+        }
+
+        .logo-img {
+            width: 50px;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            margin: 30px;
+        }
+
+        .nav-bar {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-bar-link {
+            color: #878787;
+            font-size: 24px;
+            padding: 20px;
+            letter-spacing: 15px;
+            text-transform: lowercase;
+            text-shadow: 1px 2px #7C7C7C;
+            font-family: "courier new";
+            color: white;
+        }
+
+        .main-header {
+            height: 200px;
+            background-color: #2f2f2f;
+            background: url("imgs/lights.jpg") no-repeat top right;
+            max-width: 100%;
+            opacity: 0.5;
+        }
+
+        .main-header-title {
+            text-align: left;
+            font-size: 1.25em;
+            color: #f7f8f9;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-left: 75px;
+            text-shadow: 2px 2px 5px darkgrey;
+            margin: 0px;
+            font-family: "courier new";
+            padding: 75px 10px;
+            letter-spacing: 20px;
+        }
+
+        .intro {
+            width: 1000px;
+            margin: auto;
+            font-size: 25px;
+            text-align: justify;
+        }
+
+        .entry {
+            font-family: "courier new";
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px darkgrey;
+            letter-spacing: 20px;
+        }  
+
+        .box {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            border: 1px solid;
+            background-color: #f0f5f5; 
+            box-shadow: 5px 5px 5px;  
+            border-radius: 20px;   
+            margin: 15px; 
+         }
+
+        .footer {
+            height: 40px;
+            background: #f0f5f5;
+            padding: 5px;
+        }
+
+        .title {
+          font-family: "courier new";
+          color: #151515;
+          text-shadow: 3px 2px lightgrey;
+        }
+
+        .cover {
+            width: 100%;
+        }
+
+    </style>
+
+<body>
+    <div class="main-header">
+         
+        <h1 class="main-header-title"><i class="fa fa-quote-left" aria-hidden="true"></i>My Favorite Podcast</h1>
+    </div>
+    <!-- Navbar -->
+    <div>
+        <div class="w3-bar w3-#878787 w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myHideShow()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="mailto:cep1035@wildcats.unh.edu" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Podcasts <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="lore.html" class="w3-bar-item w3-button">Lore</a>
+                    <a href="murder.html" class="w3-bar-item w3-button">My Favorite Murder</a>
+                    <a href="rabbits.html" class="w3-bar-item w3-button">Rabbits</a>
+                    <a href="tapes.html" class="w3-bar-item w3-button">The Black Tapes</a>
+                    <a href="unsolved.html" class="w3-bar-item w3-button">Unsolved Murders</a>
+                    <a href="vanished.html" class="w3-bar-item w3-button">Up and Vanished</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="lore.html" class="w3-bar-item w3-button w3-padding-large">Lore</a>
+        <a href="murder.html" class="w3-bar-item w3-button w3-padding-large">My Favorite Murder</a>
+        <a href="rabbits.html" class="w3-bar-item w3-button w3-padding-large">Rabbits</a>
+        <a href="tapes.html" class="w3-bar-item w3-button w3-padding-large">The Black Tapes</a>
+        <a href="unsolved.html" class="w3-bar-item w3-button w3-padding-large">Unsolved Murders</a>
+        <a href="vanished.html" class="w3-bar-item w3-button w3-padding-large">Up and Vanished</a>
+    </div>
+
+<img class="cover" src="imgs/tapescover.png" alt="the black tapes cover">
+    <h2 class="entry"><a href="http://theblacktapespodcast.com/">The Black Tapes</a></h2>
+    <div class="intro">
+        <p>The Black Tapes is a podcast from Pacific Northwest Stories and Minnow Beats Whale, and is hosted by Alex Reagan.<br>
+        It is a serialized docudrama about one journalist's search for the truth, her enigmatic subject's mysterious past, and the literal and fugirative ghosts that haunt them both.<br>
+        <br>How do you feel about paranormal activity or the Supernatural? Ghosts? Spirits? Demons?<br>
+        <br>Do you believe?</p>
+    </div>
+
+<!-- Menu Container -->
+        <div class="w3-container" id="what">
+            <div class="w3-content" style="max-width:1000px">
+
+                <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE SEASONS</span></h3>
+
+                <div class="w3-row w3-center w3-card-2 w3-padding">
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'one');" id="myLink">
+                        <div class="w3-col w3-third tablink">SEASON ONE</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'two');">
+                        <div class="w3-col w3-third tablink">SEASON TWO</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, 'three');">
+                        <div class="w3-col w3-third tablink">SEASON THREE</div>
+                    </a>                    
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2018');">
+                        <div class="w3-col w3-third tablink"><!-- 2018 --></div>
+                    </a>
+                </div>
+
+<!--                 <div id="2015" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding">
+                        <h3>They Made A Tonic</h3>
+                        <h5>18 Mar 2015</h5>
+                        <p>On the morning of March 17, 1892, a group of townsfolk in rural Rhode Island dug up the graves of three local women.</p>
+                    </div>
+                </div> -->
+
+                <div id="one" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode one</h4>
+                        <h3>A Tale of Two Tapes Part I</h3>
+                        <p>In the first episode of The Black Tapes, our host, Alex Reagan, enters the strange world of paranormal investigation and encounters the enigmatic Dr. Richard Strand: a ghost hunter who doesn't believe in ghosts. We follow Alex as she attempts to unlock both the secrets of Strand's collection of mysterious black VHS cases, and the dark and mysterious past of the enigmatic man himself. This is The Black Tapes. Do you believe?</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode two</h4>
+                        <h3>A Tale of Two Tapes<br>Part II</h3>
+                        <p>In the second part of the inaugural episode of The Black Tapes, Alex travels to San Francisco with Dr. Strand to dig further into one of his mysterious Black Tapes cases. But she soon discovers, Strand has secrets that extend far beyond The Black Tapes themselves.</p>
+                    </div>                
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode three</h4>
+                        <h3>The Unsound</h3>
+                        <p>The mystery of Dr. Strand's past becomes murkier as Alex joins him in a Black Tapes case centered on a musician's suicide and the possible discovery of a sound that is rumored to have been created by Lucifer himself. </p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode four</h4>
+                        <h3>Turn That Frown Upside Down</h3>
+                        <p>A grisly murder launches a macabre festival, and Alex and Dr. Strand must work together to try and connect the dots of a strange small town's dark history. At the same time, Alex begins to question whether or not she can really trust the man behind these mysterious Black Tapes.</p>
+                    </div>    
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode five</h4>                        
+                        <h3>The Devil You Know</h3>
+                        <p>If you believe in the existence of the devil in any way, then you might want to avoid this episode as Alex and Dr. Strand lift the veil on the Church's most disturbing exorcism, and discover not only dark voices from below, but a familiar voice from Strand's past. </p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                                                <h4>episode six</h4>
+
+                        <h3>The Devil's Door</h3>
+                        <p>Alex and Dr. Strand visit an asylum where a mute young man named Simon Reese, implicated in the gruesome murder of his parents, is suddenly talking. And it turns out Simon Reese might have a strange and dangerous gift...or a curse.</p>
+                    </div>                
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                                                <h4>episode seven</h4>
+
+                        <h3>Board to Death</h3>
+                        <p>Alex is introduced to a rare class of ouija board, and the mystery deepens surrounding the private life of Dr. Strand.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                                                <h4>episode eight</h4>
+
+                        <h3>Name that Tune</h3>
+                        <p>As we sink deeper into the mystery swirling around Dr. Strand’s missing wife, a familiar voice reaches out to Alex from the other side of the globe.</p>
+                    </div>     
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                                                <h4>episode nine</h4>
+
+                        <h3>Their Satanic Monastery's Request</h3>
+                        <p>As she digs deeper into the background of Brother Percival Black, Alex uncovers an ancient monastic order, and yet another layer is added to the mystery of Coralee Strand's disappearance. </p>
+                    </div>    
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                                                <h4>episode ten</h4>
+
+                        <h3>The Codex Gigas</h3>
+                        <p>Alex’s faith in Dr. Strand is tested as another piece of his past unravels, and her search into the Order of the Ceonophus uncovers a dark origin.</p>
+                        </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                                                <h4>episode eleven</h4>
+
+                        <h3>Shadow Dancing</h3>
+                        <p>In the season one finale, Alex connects the dots from Europe to New Mexico and begins to suspect she might be in over her head with Dr. Strand and his Black Tapes.</p>
+                    </div>                    
+                </div>
+
+                <div id="two" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode one</h4>                        <h3>Sleepless in Seattle</h3>
+                        <p>In the Season Two opener, Dr. Strand's search for his missing wife has begun to take its toll. Meanwhile, Alex follows a tip about another mysterious child, and the appearance of some strange but familiar symbols. </p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode two</h4>                        <h3>Speak No Evil, Think No Evil</h3>
+                        <p>Dr. Strand returns with a mysterious secret, and Alex learns that not all books are good for the soul.</p>
+                    </div>                
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode three</h4>                        <h3>Hush Little Baby</h3>
+                        <p>Alex investigates some disturbing audio files caught on a baby monitor, and Dr. Strand begins to lift the veil on his enigmatic father's history. </p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode four</h4>                        <h3>Voices Carry</h3>
+                        <p>Alex uncovers more connections between the mysterious grimoire and the Order of the Ceonophus, and discovers that there might be more to her insomnia than meets the eye.</p>
+                    </div>    
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode five</h4>                        <h3>Cheryl</h3>
+                        <p>A voice from the past leads Alex deeper into the mysterious Order of the Ceonophus, a cryptic message brings us to an old hotel in Victoria, Canada, and Dr. Strand’s Black Tapes get personal.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode six</h4>                        <h3>All in the Family</h3>
+                        <p>As Alex nears the point of no return in her investigation, an old friend reaches out to help her see the light.</p>
+                    </div>                
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode seven</h4>                        <h3>Personal Possessions</h3>
+                        <p>Alex revisits a Black Tape case in hopes of closing the circle on the role of the Order of the Ceonophus, and Dr. Strand takes our host on a stroll down memory lane.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode eight</h4>                        <h3>Riverview</h3>
+                        <p>Alex and Nic head north to Vancouver, British Columbia in search of the elusive Thomas Warren. In Vancouver, they discover a mysterious box that leads them back to an old friend.</p>
+                    </div>     
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode nine</h4>                        <h3>The Brothers of the Mount</h3>
+                        <p>With Alex and Nic back in Seattle, Dr. Strand tries to help them solve the mystery of E. Hausdorff. Meanwhile, Alex closes in on some more Strand family secrets.</p>
+                    </div>    
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode ten</h4>                        <h3>Welcome to the Machine</h3>
+                        <p>Investigation into the mysteries of the exorcism machine and Bobby Mames, leads Alex to some familiar names, and a disturbing secret from Dr. Strand's past.</p>
+                        </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode eleven</h4>                        <h3>About a Boy</h3>
+                        <p>Alex uncovers a secret about Dr. Strand's youth; a secret that could lead to unlocking the mysteries of The Black Tapes. Meanwhile, Nic and Alex close in on the location of the Axis Mundi.</p>
+                    </div> 
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode twelve</h4>                        <h3>The Axis Mundi</h3>
+                        <p>In the season two finale, Dr. Strand confronts the truth of his relationship with Coralee and reveals a secret about The Strand Institute, while Alex finally pieces together the mystery of The Mysterium.</p>
+                    </div> 
+                </div>                
+
+                <div id="three" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode one</h4>                        <h3>The Sins of the Father</h3>
+                        <p>In the Season Three premiere, Strand unearths some secrets about his father, and Alex begins to make connections between the old and the new.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode two</h4>                        
+                        <h3>The Musica Mundana</h3>
+                        <p>Alex brushes up on her mathematics while getting closer to the inner workings of the mysterious Thomas Warren and Daiva Corporation.</p>
+                    </div>                
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode three</h4>                        <h3>A Family Gathering</h3>
+                        <p>Alex runs into the unexpected in Turkey, and Strand discovers his connection to the Black Tapes might be deeper than originally thought. </p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode four</h4>                        <h3>Songs and Signs</h3>
+                        <p>Alex digs into the occult history of the Oneida community, and Strand helps her connect some threads through his Black Tapes.</p>
+                    </div>    
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode five</h4>                        <h3>Worlds Collide</h3>
+                        <p>Alex draws nearer to the Axis Mundi while Strand reveals something surprising about his past.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:300px">
+                        <h4>episode six</h4>                        <h3>Into the Black</h3>
+                        <p>In the Season Three finale of The Black Tapes Podcast, Alex and Strand arrive at a crossroads where everything meets and a decision has to be made.</p>
+                    </div>                
+                </div>
+            </div>
+        </div>
+<!-- end of container -->
+
+    <script>
+        function myOverFunction(x){
+            x.style.color = "#FFF52B";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function leaveCard(x){
+            x.style.color = "white";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function showAlert(x){
+        alert('Thank You for Visiting!');
+        }
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+        }
+        document.getElementById("myLink").click();
+
+       // Used to toggle the menu on small screens when clicking on the menu button
+        function myHideShow() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+      }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>My Favorite Murder</title>
+    <!-- link to the external CSS file for font awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #878787;
+            margin: 0;
+            font-family: 'Amatic SC', cursive;
+            font-size: 20px;
+            text-align: center;
+            background-color: #151515;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+        }
+
+        h3 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+            font-size: 100%;
+            color: gold;
+        }
+
+        h5 {
+            font-family: 'Amatic SC', cursive;
+            letter-spacing: 1.5px;
+            color: white;
+        }
+
+        .explain{
+            letter-spacing: 1px;
+            font-size: 22px;
+        }
+
+        .nav-header {
+            background: #151515;
+            height: 100px;
+            display: flex;
+        }
+
+        .nav-div {
+            margin: auto;
+        }
+
+        .logo-img {
+            width: 50px;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            margin: 30px;
+        }
+
+        .nav-bar {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-bar-link {
+            color: #878787;
+            font-size: 24px;
+            padding: 20px;
+            letter-spacing: 15px;
+            text-transform: lowercase;
+            text-shadow: 1px 2px #7C7C7C;
+            font-family: "courier new";
+            color: white;
+        }
+
+        .entry {
+            font-family: "courier new";
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px darkgrey;
+            letter-spacing: 20px;
+        }  
+
+        .main-header {
+            height: 200px;
+            background-color: #2f2f2f;
+            background: url("imgs/lights.jpg") no-repeat top right;
+            max-width: 100%;
+            opacity: 0.5;
+        }
+
+        .main-header-title {
+            text-align: left;
+            font-size: 1.25em;
+            color: #f7f8f9;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-left: 75px;
+            text-shadow: 2px 2px 5px darkgrey;
+            margin: 0px;
+            font-family: "courier new";
+            padding: 75px 10px;
+            letter-spacing: 20px;
+        }
+
+        .intro {
+            width: 1000px;
+            margin: auto;
+            font-size: 25px;
+            text-align: justify;
+        }
+
+        .box {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            border: 1px solid;
+            background-color: #f0f5f5; 
+            box-shadow: 5px 5px 5px;  
+            border-radius: 20px;   
+            margin: 15px; 
+         }
+
+        .footer {
+            height: 40px;
+            background: #f0f5f5;
+            padding: 5px;
+        }
+
+        .title {
+          font-family: "courier new";
+          color: #151515;
+          text-shadow: 3px 2px lightgrey;
+        }
+
+        .cover {
+            width: 100%;
+        }
+
+    </style>
+
+<body>
+    <div class="main-header">
+         
+        <h1 class="main-header-title"><i class="fa fa-quote-left" aria-hidden="true"></i>My Favorite Podcast</h1>
+    </div>
+    <!-- Navbar -->
+    <div>
+        <div class="w3-bar w3-#878787 w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myHideShow()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="mailto:cep1035@wildcats.unh.edu" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Podcasts <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="lore.html" class="w3-bar-item w3-button">Lore</a>
+                    <a href="murder.html" class="w3-bar-item w3-button">My Favorite Murder</a>
+                    <a href="rabbits.html" class="w3-bar-item w3-button">Rabbits</a>
+                    <a href="tapes.html" class="w3-bar-item w3-button">The Black Tapes</a>
+                    <a href="unsolved.html" class="w3-bar-item w3-button">Unsolved Murders</a>
+                    <a href="vanished.html" class="w3-bar-item w3-button">Up and Vanished</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="lore.html" class="w3-bar-item w3-button w3-padding-large">Lore</a>
+        <a href="murder.html" class="w3-bar-item w3-button w3-padding-large">My Favorite Murder</a>
+        <a href="rabbits.html" class="w3-bar-item w3-button w3-padding-large">Rabbits</a>
+        <a href="tapes.html" class="w3-bar-item w3-button w3-padding-large">The Black Tapes</a>
+        <a href="unsolved.html" class="w3-bar-item w3-button w3-padding-large">Unsolved Murders</a>
+        <a href="vanished.html" class="w3-bar-item w3-button w3-padding-large">Up and Vanished</a>
+    </div>
+
+
+    <img class="cover" src="imgs/mfmcover.jpg" alt="my Favorite murder cover"
+    <h2 class="entry"><a href="https://www.myfavoritemurder.com/">My Favorite Murder</a></h2>
+    <div class="intro">
+        <p> My Favorite Murder is a true crime podcast hosted by karen Kilgariff and Georgia Hardstark. The Podcast first started in early 2016, when the two hosts bonded over their odd fascination with the mystery behind murders.<br>
+        Since it's inception the show has broken podcast download records and ignited an enthusiastic, interactive "Murderino" fan base who came out in drove for their sold-out nationwide tour.
+        </p>
+    </div>
+
+        <!-- Menu Container -->
+        <div class="w3-container" id="what">
+            <div class="w3-content" style="max-width:1000px">
+
+                <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE YEARS</span></h3>
+                <p class="explain">My Favorite Murder episodes are released every Thursday, therefore, there are no seasons.<br>Thus the episodes are presented to you by the years they came out.<br>They do have Minisodes that are released every Monday, those episodes are not included below.<br>Occassionally live episodes replace weekly releases, live episodes are not included below. </p><br>
+
+                <div class="w3-row w3-center w3-card-2 w3-padding">
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2016');" id="myLink">
+                        <div class="w3-col w3-third tablink">2016</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2017');">
+                        <div class="w3-col w3-third tablink">2017</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2018');">
+                        <div class="w3-col w3-third tablink">2018</div>
+                    </a>                    
+                    <a href="javascript:void(0)" onclick="openMenu(event, '2018');">
+                        <div class="w3-col w3-third tablink"><!-- 2018 --></div>
+                    </a>
+                </div>
+
+<!--                 <div id="2015" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding">
+                        <h3>They Made A Tonic</h3>
+                        <h5>18 Mar 2015</h5>
+                        <p>On the morning of March 17, 1892, a group of townsfolk in rural Rhode Island dug up the graves of three local women.</p>
+                    </div>
+                </div> -->
+
+                <div id="2016" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>My Firstest Murder</h3>
+                        <h5>13 Jan 2016</h5>
+                        <p>My Firstest Murder – in the very first episode, Karen & Georgia discuss car accidents, Jon Benet Ramsey, and the Sacramento’s East Area Rapist.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>My Second Best Murder</h3>
+                        <h5>22 Jan 2016</h5>
+                        <p>In this episode, Karen & Georgia discuss Paul Bernardo the Scarborough Rapist/Schoolgirl Killer and the assassination of Robert Kennedy.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>Our Favorite Thirder</h3>
+                        <h5>31 Jan 2016</h5>
+                        <p> In this episode, Karen & Georgia discuss the Cameron Todd Willingham arson case and the Oakland County child killings.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding w3-center" style="height:200px">
+                        <h3>Go Forth and Murder</h3>
+                        <h5>11 Feb 2016</h5>
+                        <p>The girls touch on Making a Murderer theories before delving into child killer Cropsey and the murder of Michele Wallace.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding w3-center" style="height:200px">
+                        <h3>Five Favorite Murder</h3>
+                        <h5>16 Feb 2016</h5>
+                        <p>In this episode the hosts discuss the LA Freeway Killers of the 70s and the Martha Moxley murder case.</p>
+                    </div>                 
+                </div>
+
+                <div id="2017" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>The Golden Anniversary</h3>
+                        <h5>5 Jan 2017</h5>
+                        <p>On this episode Karen and Georgia delve into the mystery of the Somerton Man and discuss the 1984 bioterror attack by followers of the Bhagwan Shree Rajneesh.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>A Bit of Oblivion</h3>
+                        <h5>12 Jan 2017</h5>
+                        <p>This week Karen and Georgia recount the harrowing survival story of Jennifer Holliday adn teh tragic case behind the creation of Megan's Law.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>Bonjour, Internet!</h3>
+                        <h5>19 Jan 2017</h5>
+                        <p>This week Karen and Georgia tackle internet murderer Luka Magnotta and the unsolved case that lead to the creation of the AMBER Alert.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding w3-center" style="height:200px">
+                        <h3>Valet Area</h3>
+                        <h5>2 Feb 2017</h5>
+                        <p>Let Karen and Georgia be your valet to My Favorite Murder. On this episode they cover the terrible deeds of Nathaniel Bar-Jonah and Rodney Alcala.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding w3-center" style="height:200px">
+                        <h3>Let's Hear Your Podcast</h3>
+                        <h5>9 Feb 2017</h5>
+                        <p>This week Karen and Georgia get real deep into the story of french maids, Christine and Lea Papin and the "carnival atmosphere" surrounding Dr. Sam Sheppard and the murder of his wife.</p>
+                    </div>
+                </div>                
+
+                <div id="2018" class="w3-container menu w3-padding-48 w3-card-2">
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>Decompressions</h3>
+                        <h5>4 Jan 2018</h5>
+                        <p>On this episode Karen and Georgia cover the Beast of Jersey and the Cleveland Torso Killer.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>Garden Party</h3>
+                        <h5>18 Jan 2018</h5>
+                        <p>This week Karen and Georgia cover the case of Susan Kuhnhausen and the Order of the Solar Temple cult.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-third w3-padding w3-center" style="height:250px">
+                        <h3>Proclensity</h3>
+                        <h5>25 Jan 2018</h5>
+                        <p>This week Karen and Georgia cover the murder of Christa Worthington and the case of Typhoid Mary.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding w3-center" style="height:200px">
+                        <h3>Courage Shoulders</h3>
+                        <h5>1 Feb 2018</h5>
+                        <p>Let Karen and Georgia recount the murder of Theresa Katherine Foster and killer Luigi Longhi.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding w3-center" style="height:200px">
+                        <h3>King of Police</h3>
+                        <h5>15 Feb 2018</h5>
+                        <p>This week Karen and Georgia go over the stories of killer Matthew Hoffman and the murder of Little Gregory.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- end of container -->
+
+
+    <script>
+        function myOverFunction(x){
+            x.style.color = "#FFF52B";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function leaveCard(x){
+            x.style.color = "white";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function showAlert(x){
+        alert('Thank You for Visiting!');
+        }
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+        }
+        document.getElementById("myLink").click();
+
+// Used to toggle the menu on small screens when clicking on the menu button
+        function myHideShow() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+      }
+
+    </script>
+</body>
+
+</html>

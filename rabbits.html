@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Rabbits</title>
+    <!-- link to the external CSS file for font awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #878787;
+            margin: 0;
+            font-family: 'Amatic SC', cursive;
+            font-size: 20px;
+            text-align: center;
+            background-color: #151515;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+        }
+
+        h3 {
+            text-transform: lowercase;
+            font-family: "courier new";
+            font-weight: lighter;
+            font-size: 100%;
+            color: gold;
+        }
+
+        h5 {
+            font-family: 'Amatic SC', cursive;
+            letter-spacing: 1.5px;
+            color: white;
+        }
+
+        .explain{
+            letter-spacing: 1px;
+            font-size: 22px;
+        }
+
+        .nav-header {
+            background: #151515;
+            height: 100px;
+            display: flex;
+        }
+
+        .nav-div {
+            margin: auto;
+        }
+
+        .logo-img {
+            width: 50px;
+            margin-left: 5px;
+        }
+
+        .search-icon {
+            margin: 30px;
+        }
+
+        .nav-bar {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-bar-link {
+            color: #878787;
+            font-size: 24px;
+            padding: 20px;
+            letter-spacing: 15px;
+            text-transform: lowercase;
+            text-shadow: 1px 2px #7C7C7C;
+            font-family: "courier new";
+            color: white;
+        }
+
+        .main-header {
+            height: 200px;
+            background-color: #2f2f2f;
+            background: url("imgs/lights.jpg") no-repeat top right;
+            max-width: 100%;
+            opacity: 0.5;
+        }
+
+        .main-header-title {
+            text-align: left;
+            font-size: 1.25em;
+            color: #f7f8f9;
+            text-transform: uppercase;
+            font-weight: normal;
+            padding-left: 75px;
+            text-shadow: 2px 2px 5px darkgrey;
+            margin: 0px;
+            font-family: "courier new";
+            padding: 75px 10px;
+            letter-spacing: 20px;
+        }
+
+        .entry {
+            font-family: "courier new";
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px darkgrey;
+            letter-spacing: 20px;
+        }  
+
+        .intro {
+            width: 1000px;
+            margin: auto;
+            font-size: 25px;
+            text-align: justify;
+        }
+
+        .box {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            border: 1px solid;
+            background-color: #f0f5f5; 
+            box-shadow: 5px 5px 5px;  
+            border-radius: 20px;   
+            margin: 15px; 
+         }
+
+        .footer {
+            height: 40px;
+            background: #f0f5f5;
+            padding: 5px;
+        }
+
+        .title {
+          font-family: "courier new";
+          color: #151515;
+          text-shadow: 3px 2px lightgrey;
+        }
+
+        .cover {
+            width: 100%;
+        }
+
+    </style>
+
+<body>
+    <div class="main-header">
+         
+        <h1 class="main-header-title"><i class="fa fa-quote-left" aria-hidden="true"></i>My Favorite Podcast</h1>
+    </div>
+    <!-- Navbar -->
+    <div>
+        <div class="w3-bar w3-#878787 w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myHideShow()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="mailto:cep1035@wildcats.unh.edu" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Podcasts <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="lore.html" class="w3-bar-item w3-button">Lore</a>
+                    <a href="murder.html" class="w3-bar-item w3-button">My Favorite Murder</a>
+                    <a href="rabbits.html" class="w3-bar-item w3-button">Rabbits</a>
+                    <a href="tapes.html" class="w3-bar-item w3-button">The Black Tapes</a>
+                    <a href="unsolved.html" class="w3-bar-item w3-button">Unsolved Murders</a>
+                    <a href="vanished.html" class="w3-bar-item w3-button">Up and Vanished</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="lore.html" class="w3-bar-item w3-button w3-padding-large">Lore</a>
+        <a href="murder.html" class="w3-bar-item w3-button w3-padding-large">My Favorite Murder</a>
+        <a href="rabbits.html" class="w3-bar-item w3-button w3-padding-large">Rabbits</a>
+        <a href="tapes.html" class="w3-bar-item w3-button w3-padding-large">The Black Tapes</a>
+        <a href="unsolved.html" class="w3-bar-item w3-button w3-padding-large">Unsolved Murders</a>
+        <a href="vanished.html" class="w3-bar-item w3-button w3-padding-large">Up and Vanished</a>
+    </div>
+
+<img class="cover" src="imgs/rabbitscover.png" alt="rabbits cover">
+    <h2 class="entry"><a href="https://www.rabbitspodcast.com/">Rabbits</a></h2>
+    <div class="intro">
+        <p>Rabbits is a docudrama podcast series from the Public Radio Alliance.<br>
+        When Carly Parker’s friend Yumiko goes missing under very mysterious circumstances, Carly’s search for her friend leads her headfirst into a ancient mysterious game known only as Rabbits. Soon Carly begins to suspect that Rabbits is much more than just a game, and that the key to understanding Rabbits, might be the key to the survival of our species, and the Universe, as we know it.</p>
+    </div>
+
+        <!-- Menu Container -->
+        <div class="w3-container" id="what">
+            <div class="w3-content" style="max-width:1000px">
+
+                <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">EPISODES</span></h3>
+                <p class="explain">Episodes of Rabbits are released every other Tuesday. </p><br>
+
+        <div class="w3-row w3-center w3-card-2 w3-padding">
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Game On</h3>
+                        <p>Carly Parker's search for her missing best friend leads her to a mysterious nameless ancient game the players refer to only as “Rabbits;” a secret, dangerous, and occasionally fatal underground game, where the prizes are unclear but may involve: large sums of money, NSA or CSI recruitment, and perhaps even the key to unlocking the secrets of the universe.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Concernicus Jones</h3>
+                        <p>In the second episode of Rabbits, Carly continues her search for Yumiko aided by a potential new ally, a stranger who appears to know a great deal about the mysterious game known as “Rabbits.”</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Marigold and Persephone</h3>
+                        <p>In our third episode, Carly’s search for Yumiko leads to an obscure underground radio station, a vintage t-shirt reveals an impossible photograph, and a work of classic modern art appears to contain a strange secret.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Dog Lover in Hell</h3>
+                        <p>In the fourth episode of Rabbits, Carly and Jones dig further into the history of the game, a new voice points them in a new direction, and the mysterious Hazel makes another appearance. </p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px"> 
+                        <h3>Priesthood One</h3>
+                        <p>In episode five, Carly digs into the mysterious Gatewick Institute, Jones finds something interesting in the Marigold Recordings, and the Magician provides some additional information about the game.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Strange Attractors</h3>
+                        <p>In the sixth episode of Rabbits, the Marigold recordings appear to reveal the impossible, and we learn something remarkable about Carly’s past.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Arcadia</h3>
+                        <p>Carly finds something while playing a game. Harper and Carly meet an eccentric DIY, spook, Carly and Jones visit Arcadia, and Marigold has another message.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Elysian</h3>
+                        <p>Carly and Jones visit a reclusive billionaire who appears to know a whole lot more than he’s letting on, and Carly begins to seriously consider the fact that Rabbits might be much more than just a game.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>Hazel</h3>
+                        <p>In the penultimate episode of Season One, Carly and Jones dig further into The mysterious Gatewick Institute, and another conversation with Alan Scarpio reveals more about the game, and the enigmatic figure known as Hazel.</p>
+                    </div>
+                    <div class="w3-container w3-card-2 w3-half w3-padding" style="height:325px">
+                        <h3>The Future We Deserve</h3>
+                        <p>In the Season Finale of Rabbits, Carly encounters some old friends before leaving the country in search of Yumiko, and, perhaps, the final mystery at the heart of Rabbits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- end of container -->
+
+
+
+    <script>
+        function myOverFunction(x){
+            x.style.color = "#FFF52B";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function leaveCard(x){
+            x.style.color = "white";
+            x.style.backgroundColor = "#151515";
+        }
+
+        function showAlert(x){
+        alert('Thank You for Visiting!');
+        }
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("menu");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+        }
+        document.getElementById("myLink").click();
+
+               // Used to toggle the menu on small screens when clicking on the menu button
+        function myHideShow() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+      }
+
+    </script>
+</body>
+
+</html>
